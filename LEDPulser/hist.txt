@@ -1,0 +1,1000 @@
+    7  cd ROOT/
+    8  wget ftp://root.cern.ch/root/root_v5.34.01.Linux-slc5_amd64-gcc4.3.tar.gz
+    9  ls
+   10  tar -xvf root_v5.34.01.Linux-slc5_amd64-gcc4.3.tar.gz 
+   11  ls
+   12  cd root
+   13  ls
+   14  cd bin/
+   15  ls
+   16  ./root
+   17  ls
+   18  cd ..
+   19  ls
+   20  cd ..
+   21  ls
+   22  cd ..
+   23  ls
+   24  cd ROOT/
+   25  ls
+   26  cd root
+   27  ls
+   28  cd bin/
+   29  root
+   30  ls
+   31  cd ../
+   32  ls
+   33  emacs -nw README/README
+   34  ls
+   35  emacs -nw README/README
+   36  cd bin/
+   37  ls
+   38  chmod +rwxrwxrwx thisroot.sh 
+   39  ./thisroot.sh 
+   40  chmod +rwxrwxrwx thisroot.csh 
+   41  ./ thisroot.csh 
+   42  chmod +rwxrwxrwx thisroot.sh 
+   43  ./thisroot.csh 
+   44  ./thisroot.sh 
+   45  cd ../../
+   46  s
+   47  ls
+   48  cd root
+   49  ls
+   50  ./bin/thisroot.sh 
+   51  cd ..
+   52  ls
+   53  cd ..
+   54  ls
+   55  root
+   56  ls
+   57  cd Pulser/
+   58  ls
+   59  cd ..
+   60  ls
+   61  cd Pulser/
+   62  ;s
+   63  ls
+   64  ../ROOT/root/bin/root PulseSeqGenToFile.C > PulseSeq.txt
+   65  .q
+   66  emacs -nw PulseSeq.txt 
+   67  emacs -nw PulseSeqGenToFile.C 
+   68  emacs -nw PulseSeq.txt 
+   69  ls
+   70  scp bjpjones@uboonegpvm02.fnal.gov:~/PulseSeqs/* .
+   71  ls
+   72  cat PulseSeq1Hz.txt | plink -load Pulser
+   73  cat PulseSeq100Hz.txt | plink -load Pulser
+   74  ls
+   75  emacs -nw PulseSeq1Hz.txt
+   76  emacs -nw PulseSeq100Hz.txt
+   77  cat -v PulseSeq1Hz.txt
+   78  cat -v PulseSeq100Hz.txt
+   79  ls
+   80  putty
+   81  cat PulseSeq100Hz.txt | plink -load Pulser
+   82  putty
+   83  cat PulseSeq100Hz.txt | plink -load Pulser
+   84  man plink
+   85  cat PulseSeq1Hz.txt
+   86  ls
+   87  tr '\015' '\012' < PulseSeq1Hz.txt > Unix1Hz
+   88  tr '\015' '\012' < PulseSeq1Hz.txt > Unix1Hz.txt
+   89  emacs -nw Unix1Hz.txt 
+   90  cat Unix1Hz.txt | plink -load Pulser
+   91  ls
+   92  sed "s/\n/hello/g" Unix1Hz.txt 
+   93  sed 's/\n/hello/g' Unix1Hz.txt 
+   94  sed 's/\r/hello/g' Unix1Hz.txt 
+   95  sed "s/\r/hello/g" Unix1Hz.txt 
+   96  sed "s/\\n/hello/g" Unix1Hz.txt 
+   97  cat -v Unix1Hz.txt 
+   98  sed "s/\\n/hello/g" Unix1Hz.txt 
+   99  sed 's/\\n/hello/g' Unix1Hz.txt 
+  100  sed 's/\\r/hello/g' Unix1Hz.txt 
+  101  sed 's!\\r!hello!g' Unix1Hz.txt 
+  102  sed 's!\\n!hello!g' Unix1Hz.txt 
+  103  sed 's!$!hello!g' Unix1Hz.txt 
+  104  sed 's!$!\r!g' Unix1Hz.txt 
+  105  sed 's!$!\r!g' Unix1Hz.txt -i
+  106  cat Unix1Hz.txt | plink -load Pulser
+  107  sed 's!$!hello!g' Unix1Hz.txt 
+  108  emacs -nw Unix1Hz
+  109  sed 's!\\r!hello!g' Unix1Hz.txt 
+  110  sed 's!\r!hello!g' Unix1Hz.txt 
+  111  sed 's!\r!\n!g' Unix1Hz.txt 
+  112  sed 's!\r!\n!g' Unix1Hz.txt -i
+  113  cat Unix1Hz.txt | plink -load Pulser
+  114  unix2dos Unix1Hz.txt >Dos1Hz.txt
+  115  cat Dos1Hz.txt | plink -load Pulser
+  116  emacs -nw Dos1Hz.txt 
+  117  emacs -nw Unix1Hz.txt 
+  118  cat Unix1Hz.txt | plink -load Pulser
+  119  emacs -nw Unix1Hz.txt 
+  120  exit
+  121  cd Pulser/
+  122  ls
+  123  emacs -nw Unix1Hz.txt 
+  124  dos2unix Unix1Hz.txt 
+  125  cat Dos1Hz.txt | plink -load Pulser
+  126  cat Unix1Hz.txt | plink -load Pulser
+  127  ls
+  128  cat -v Unix1Hz.txt 
+  129  sed 's!\\r!\\n!g' Unix1Hz.txt 
+  130  sed 's!\$$\\n!g' Unix1Hz.txt 
+  131  sed 's!\$$!\\n!g' Unix1Hz.txt 
+  132  sed 's!\$!\\n!g' Unix1Hz.txt 
+  133  sed 's!\$!\hello!g' Unix1Hz.txt 
+  134  sed 's!\$!hello!g' Unix1Hz.txt 
+  135  sed 's!$!hello!g' Unix1Hz.txt 
+  136  sed 's!$\\r!hello!g' Unix1Hz.txt 
+  137  sed 's!$\\n!hello!g' Unix1Hz.txt 
+  138  sed 's!$\n!hello!g' Unix1Hz.txt 
+  139  sed 's!$\r!hello!g' Unix1Hz.txt 
+  140  sed 's!$$!hello!g' Unix1Hz.txt 
+  141  sed 's!$!hello!g' Unix1Hz.txt 
+  142  sed 's!\\n!a!g' Unix1Hz.txt 
+  143  sed 's!\n!a!g' Unix1Hz.txt 
+  144  sed 's!\\\n!a!g' Unix1Hz.txt 
+  145  sed 's!$!a!g' Unix1Hz.txt 
+  146  sed 's!$!a!g' Unix1Hz.txt  -i
+  147  sed 's!a\na!g' Unix1Hz.txt 
+  148  sed 's!a\na!b'g' Unix1Hz.txt 
+  149  sed 's!a\na!b!g' Unix1Hz.txt 
+  150  sed 's!a\ra!b!g' Unix1Hz.txt 
+  151  sed 's!a\\ra!b!g' Unix1Hz.txt 
+  152  sed 's!a\\na!b!g' Unix1Hz.txt 
+  153  tr \d '\r' Unix1Hz
+  154  tr \d '\r' Unix1Hz.txt 
+  155  tr -d '\r' Unix1Hz.txt 
+  156  tr -d '\r' < Unix1Hz.txt 
+  157  tr -d '\n' < Unix1Hz.txt 
+  158  tr -d '\n' < Unix1Hz.txt | sed "s/\n/g"
+  159  tr -d '\n' < Unix1Hz.txt | sed "s/aa/\n/g"
+  160  tr -d '\n' < Unix1Hz.txt | sed "s/aa/\r/g"
+  161  tr -d '\n' < Unix1Hz.txt | sed "s/aa/\n/g"
+  162  tr -d '\n' < Unix1Hz.txt | sed "s/aa//g"
+  163  tr -d '\n' < Unix1Hz.txt | sed "s/aa/\r/g"
+  164  tr -d '\n' < Unix1Hz.txt | sed "s/aa/\\r/g"
+  165  cd cp210x-3.1.0
+  166  ls
+  167  cd cp210x
+  168  ls
+  169  emacs -nw Rules.make 
+  170  man plink
+  171  ls
+  172  history
+  173  export UBOONEDAR_HOME_DIR=${HOME}/development 
+  174  source /uboone/setup_online.sh 
+  175  ls
+  176  ls -ltr
+  177  cd development/build/
+  178  ls
+  179   source ../uboonedaq/projects/ups/setup_for_development -d
+  180  cmake -DCMAKE_INSTALL_PREFIX=${UBOONEDAQ_HOME_DIR}/install -> DCMAKE_BUILD_TYPE=$CETPKG_TYPE -Dqualifier:STRING=$CETPKG_QUAL $CETPKG_SOURCE 
+  181  make clean; make -j32; make install 
+  182  diff ../uboonedaq/projects/pabwork/nevispcie_diag.cpp /home/georgiak/nevispcie_diag.cpp
+  183  cp ../uboonedaq/projects/pabwork/nevispcie_diag.cpp /home/georgiak/nevispcie_diag.cpp
+  184  kinit georgiak
+  185  cp ../uboonedaq/projects/pabwork/nevispcie_diag.cpp /home/georgiak/nevispcie_diag.cpp
+  186  exit
+  187  history
+  188  export UBOONEDAR_HOME_DIR=${HOME}/development
+  189  source /uboone/setup_online.sh
+  190  cd development/build/
+  191  source ../uboonedaq/projects/ups/setup_for_development -d
+  192  cmake -DCMAKE_INSTALL_PREFIX=${UBOONEDAQ_HOME_DIR}/install -> DCMAKE_BUILD_TYPE=$CETPKG_TYPE -Dqualifier:STRING=$CETPKG_QUAL $CETPKG_SOURCE
+  193  make clean; make -j32; make install
+  194  diff ../uboonedaq/projects/pabwork/nevispcie_diag.cpp /home/georgiak/nevispcie_diag.cpp
+  195  history
+  196  exit
+  197  putty
+  198  putty -load Pulser
+  199  ./pmtreadout 
+  200  ksu
+  201  su
+  202  ssh -X uboonedaq@uboonepab02
+  203  ssh -X uboonedaq@uboonepab02.fnal.gov
+  204  ssh -X uboonedaq@uboonepab02
+  205  kinit
+  206  who
+  207  man ksu
+  208  ksu .
+  209  ls
+  210  cd Pulser/
+  211  ls
+  212  emacs -nw Pulse1Hz.sh
+  213  emacs -nw PulseSeq1Hz.txt 
+  214  ksu
+  215  cd /dev/
+  216  ls
+  217  ll ttyUSB0 
+  218  emacs /etc/udev/permissions.d/50-udev.permissions
+  219  emacs /etc/udev/permissions.d/50-udev.permissions -nw
+  220  ls
+  221  ksu
+  222  ls
+  223  cd ~/
+  224  ls
+  225  cd Pulser/
+  226  ls
+  227  ./Pulse1Hz.sh
+  228  ls
+  229  emacs -nw Pulse1Hz.sh
+  230  ./Pulse1Hz.sh
+  231  emacs -nw Pulse1Hz.sh
+  232  ./Pulse1Hz.sh
+  233  ls
+  234  emacs -nw Pulse1Hz.sh
+  235  ./Pulse1Hz.sh
+  236  emacs -nw Pulse1Hz.sh
+  237  emacs -nw PulseSeq1Hz.txt
+  238  ./Pulse1Hz.sh
+  239  ls
+  240  cd /dev/
+  241  ls
+  242  ksu
+  243  cd ~
+  244  ls
+  245  cd Pulser/
+  246  ls
+  247  ./Pulse1Hz.sh
+  248  ls
+  249  cd /dev/
+  250  ls
+  251  ksu
+  252  cd ~/Pulser/
+  253  ls
+  254  ./Pulse1Hz.sh
+  255  ls
+  256  cd /u
+  257  cd /ude
+  258  cd /etc/udev/
+  259  ls
+  260  emacs -nw permissions.d/50-udev.permissions
+  261  ksu
+  262  logout
+  263  more ~/.profile
+  264  pwd
+  265  more .bash
+  266  more .bash_profile 
+  267  cssgui.server start
+  268  whoami
+  269  more /etc/passwd
+  270  grep uboonedaq /etc/passwd
+  271  ls
+  272  ./pmtreadout
+  273  ksu
+  274  su
+  275  ksu
+  276  ssh -Xuboonedaq@uboonepab02.fnal.gov
+  277  ssh -X uboonedaq@uboonepab02.fnal.gov
+  278  logout
+  279  cssgui.server start
+  280    . /uboone/setup
+  281   setup epics_css v3_1_0.FNAL01
+  282  cssgui.server start
+  283   setup epics_css v3_1_0.FNAL01
+  284  cssgui.server start\
+  285  putty
+  286  cd 
+  287  cd ~/Pulser/
+  288  ls
+  289  cat Unix1Hz 
+  290  cat Unix1Hz > plink -load Unix1Hz
+  291  cat Unix1Hz > plink -load Pulser
+  292  cat Unix1Hz | plink -load Pulser
+  293  cat -v Unix1Hz | plink -load Pulser
+  294  putty
+  295  cat -v Unix1Hz | plink -load Pulser
+  296  cat -v PulseSeq1Hz.txt | plink -load Pulser
+  297  cat -v Unix1Hz.txt | plink -load Pulser
+  298  cat -v Unix.txt | plink -load Pulser
+  299  cat -v Unix1Hz | plink -load Pulser
+  300  ls
+  301  cat -v PulseSeq.txt | plink -load Pulser
+  302  cat -v PulseSeq10Hz.txt | plink -load Pulser
+  303  ls
+  304  cat -v PulseSeq1\Hz.txt | plink -load Pulser
+  305  cat -v Unix1Hz | plink -load Pulser
+  306  sed "s/\\n/aa/g" Unix1Hz
+  307  sed "s/\\r/aa/g" Unix1Hz
+  308  sed 's/\\r/aa/g' Unix1Hz
+  309  sed 's/\r/aa/g' Unix1Hz
+  310  sed 's/\n/aa/g' Unix1Hz
+  311  sed 's/$/\n/g' Unix1Hz > Unix1Hzn
+  312  sed 's/$/a/g' Unix1Hz 
+  313  emacs -nw Unix1Hz.txt 
+  314  sed 's/$/a/g' Unix1Hz 
+  315  sed 's/$\n/a/g' Unix1Hz 
+  316  sed 's/$\\n/a/g' Unix1Hz 
+  317  sed 's/$\\r/a/g' Unix1Hz 
+  318  cp ../Desktop/PulseSeq1Hz.txt  .
+  319  emacs -nw PulseSeq1Hz.txt
+  320  cat -v PulseSeq1\Hz.txt
+  321  cat PulseSeq1Hz.txt
+  322  cat -vvPulseSeq1Hz.txt
+  323  cat -vv PulseSeq1Hz.txt
+  324  dos2unix PulseSeq1Hz.txt 
+  325  cat PulseSeq1Hz.txt
+  326  cat -vPulseSeq1Hz.txt
+  327  cat -v PulseSeq1Hz.txt
+  328  iconv -f utf8 -t ascii PulseSeq1Hz.txt > PulseSeqAscii.txt
+  329  emacs -nw PulseSeqAscii.txt 
+  330  cat PulseSeqAscii.txt 
+  331  file -I PulseSeq1Hz.txt
+  332  file -i PulseSeq1Hz.txt
+  333  iconv -f us-utf8 -t ascii PulseSeq1Hz.txt > PulseSeqAscii.txt
+  334  iconv -f us-ascii -t ascii PulseSeq1Hz.txt > PulseSeqAscii.txt
+  335  file -i PulseSeq1Hz.txt
+  336  emacs -nw PulseSeq1Hz.txt
+  337  emacs -nw PulseSeqAscii.txt 
+  338  cat -v PulseSeqAscii.txt 
+  339  file -i PulseSeqAscii.txt 
+  340  rm PulseSeqAscii.txt 
+  341  iconv -f us-ascii -t ascii PulseSeq1Hz.txt > PulseSeqAscii.txt
+  342  file -i PulseSeqAscii.txt 
+  343  iconv -f us-ascii -t utf8 PulseSeq1Hz.txt > PulseSeqAscii.txt
+  344  file -i PulseSeqAscii.txt 
+  345  rm PulseSeqAscii.txt 
+  346  iconv -f us-ascii -t utf8 PulseSeq1Hz.txt > PulseSeqAscii.txt
+  347  file -i PulseSeqAscii.txt 
+  348  iconv -f us-ascii -t utf8 < PulseSeq1Hz.txt > PulseSeqAscii.txt
+  349  file -i PulseSeqAscii.txt 
+  350  cd ..
+  351  ls
+  352  cat New1Hz.txt 
+  353  cat -v\New1Hz.txt 
+  354  cat -v New1Hz.txt 
+  355  emacs -nw New1Hz.txt 
+  356  ls
+  357  cat New1HzDos.txt 
+  358  ls
+  359  cd Pulser/
+  360  rm *.txt
+  361  cp ../New1HzDos.txt  .
+  362  cat New1HzDos.txt > plink -load Pulser
+  363  cat New1HzDos.txt | plink -load Pulser
+  364  putty
+  365  ls
+  366  cd ..
+  367  ls
+  368  cat New1HzLFCR.txt | plink -load Pulser
+  369  putty
+  370  cat New1HzLFCR.txt | plink -load Pulser
+  371  ls
+  372  rm New1Hz.txt 
+  373  rm New1HzDos.txt 
+  374  mv New1HzLFCR.txt Pulser/PulseSeq1Hz.txt
+  375  mv PulseSeq100Hz.txt Pulse
+  376  mv Pulse Pulser/PulseSeq100Hz.txt
+  377  cd Pulser/
+  378  ls
+  379  rm *~
+  380  tm Unix2Dos/ -r
+  381  rm Unix2Dos/ -rf
+  382  rm MiniCom/ -rf
+  383  ls
+  384  rm iso89 
+  385  cat plink 
+  386  rm plink 
+  387  ls
+  388  rm \#PulseSeqAscii.txt# 
+  389  ls
+  390  rm Unix1Hz*
+  391  ls
+  392  rm putty-0.62-1.el6.rf.x86_64.rpm 
+  393  rm dos2unix-3.1-37.el6.i686.rpm 
+  394  ls
+  395  rm New1HzDos.txt 
+  396  emacs -nw PulseSeqGenToFile.C 
+  397  sed 's/\\n/\\r/g' PulseSeqGenToFile.C 
+  398  sed 's/\\r/\\r\\n/g' PulseSeqGenToFile.C 
+  399  sed 's/\\r/\\r\\n/g' PulseSeqGenToScreen.C -i
+  400  rm PulseSeqGenToScreen.C 
+  401  ls
+  402  putty
+  403  putty -load Pulser
+  404  emacs -nw PulseSeq1Hz.txt 
+  405  cat PulseSeq1Hz.txt | plink -load Pulser &
+  406  putty
+  407  putty -load Pulser
+  408  cat PulseSeq1Hz.txt | plink -load Pulser &
+  409  cat PulseSeq1Hz.txt | plink -load Pulser 
+  410  putty &
+  411  putty -load Pulser &
+  412  cat PulseSeq1Hz.txt | plink -load Pulser 
+  413  ls
+  414  emacs -nw Pulse1Hz.sh
+  415  echo "RE" | plink -load Pulser
+  416  putty
+  417  emacs -nw Pulse1Hz.sh
+  418  ksu
+  419  chmod +rwxrwxrwx Pulse1Hz.sh
+  420  ./Pulse1Hz.sh 
+  421  ls
+  422  emacs -nw Pulse1Hz.sh
+  423  ./Pulse1Hz.sh
+  424  putty
+  425  ./Pulse1Hz.sh
+  426  bg
+  427  putty
+  428  putty -load Pulser
+  429  emacs -nw PulseSeq1Hz.txt
+  430  cd /dev/
+  431  ls
+  432  ksu
+  433  cd ~/Pulser/
+  434  ls
+  435  ./Pulse1Hz.sh
+  436  ls
+  437  cd output/
+  438  ls
+  439  cd pmt/
+  440  ls
+  441  less km_test.txt 
+  442  ./pmtreadout 
+  443  ksu
+  444  which libwdapill00
+  445  kinit -a ignarra@FNAL.GOV
+  446  ssh -X ignarra@uboonepab02.fnal.gov
+  447  ssh katori
+  448  ls
+  449  cd ..
+  450  ls
+  451  cd katori/
+  452  kinit katori@fnal.gov
+  453  kinit katori
+  454  ksu
+  455  cd /etc/udev/
+  456  ls
+  457  cd /dev/
+  458  ls
+  459  ll
+  460  ls
+  461  cd ../etc/
+  462  ksu
+  463  cd /dev/
+  464  ll ttyUSB0 
+  465  ll
+  466  ll ttyUSB0 
+  467  emacs /etc/udev/rules.d/10-local.rules
+  468  emacs /etc/udev/rules.d/10-local.rules -nw
+  469  ksu
+  470  ls
+  471  emacs -nw pmt-hv-instructions.txt 
+  472  cd Pulser/
+  473  ls
+  474  cd /etc/udev/
+  475  emacs -nw rules.d/90-hal.rules 
+  476  emacs -nw rules.d/90-alsa.rules 
+  477  ls
+  478  cd /etc/udev/rules.d/
+  479  ksu
+  480   setup epics_css v3_1_0.FNAL01
+  481  ksu
+  482    . /uboone/setup
+  483  setup-development-source
+  484   setup epics_css v3_1_0.FNAL01
+  485  cssgui.server start\
+  486  top
+  487  cd /dev/
+  488  ll ttyUSB0 
+  489  cd ~
+  490  ls
+  491  cd Pulser/
+  492  ls
+  493  ./Pulse1Hz.sh
+  494  ls
+  495  cd ~/Pulser/
+  496  emacs -nw Pulse100Hz.sh
+  497  ./Pulse100Hz.sh
+  498  ls
+  499  emacs -nw Pulse100Hz.sh
+  500  ./Pulse100Hz.sh
+  501  emacs -nw PulseSeq100Hz.txt 
+  502  emacs -nw Pulse100Hz.sh
+  503  ./Pulse100Hz.sh
+  504  putty
+  505  top
+  506  putty
+  507  emacs -nw Pulse100Hz.sh
+  508  ./Pulse100Hz.sh
+  509  emacs -nw Pulse100Hz.sh
+  510  ./Pulse100Hz.sh
+  511  emacs -nw Pulse100Hz.sh
+  512  ./Pulse100Hz.sh
+  513  emacs -nw Pulse100Hz.sh
+  514  ./Pulse100Hz.sh
+  515  emacs -nw Pulse100Hz.sh
+  516  ./Pulse100Hz.sh
+  517  emacs -nw Pulse100Hz.sh
+  518  ./Pulse100Hz.sh
+  519  emacs -nw Pulse100Hz.sh
+  520  ./Pulse100Hz.sh
+  521  emacs -nw Pulse100Hz.sh
+  522  ./Pulse100Hz.sh
+  523  emacs -nw Pulse100Hz.sh
+  524  ./Pulse100Hz.sh
+  525  emacs -nw Pulse100Hz.sh
+  526  ./Pulse100Hz.sh
+  527  emacs -nw Pulse100Hz.sh
+  528  cd  Pulser/
+  529  wget http://grox.net/software/mine/slowcat/slowcat.py
+  530  python slowcat.py PulseSeq100Hz.txt 
+  531  python slowcat.py -d 0.02 < PulseSeq100Hz.txt 
+  532  python slowcat.py -d 0.01 < PulseSeq100Hz.txt 
+  533  emacs -nw Pulse100Hz.sh
+  534  ./Pulse100Hz.sh
+  535  emacs -nw Pulse100Hz.sh
+  536  emacs -nw slowcat.py 
+  537  ./Pulse100Hz.shtop
+  538  top
+  539  ./Pulse100Hz.sh
+  540  ls
+  541  top
+  542  emacs -nw Pulse100Hz.sh
+  543  ./Pulse100Hz.sh
+  544  top
+  545  emacs -nw pv.sh
+  546  ls
+  547  cat /dev/urandom | pv -L 3k
+  548  cat /dev/urandom | pv.sh -L 3k
+  549  ls
+  550  wget http://www.ivarch.com/programs/rpms/pv-1.3.4-1.x86_64.rpm
+  551  rpm -Uvh pv-1.3.4-1.x86_64.rpm 
+  552  ksu
+  553  ls
+  554  cat PulseSeq100Hz.txt | pv -L 3k 
+  555  cat PulseSeq100Hz.txt 
+  556  emacs -nw Pulse100Hz.sh
+  557  exit
+  558  ls
+  559  cd /etc/
+  560  ls
+  561  cd udev/
+  562  ls
+  563  cd /dev/
+  564  ls ttyUSB0 
+  565  ll ttyUSB0 
+  566  ls
+  567  putty
+  568  cd Pulser/
+  569  ls
+  570  emacs -nw PulseSeq100Hz.txt 
+  571  emacs -nw Pulse100Hz.sh
+  572  ./Pulse100Hz.sh
+  573  top
+  574  putty
+  575  putty -load Pulser
+  576  ls
+  577  cd Pulser/
+  578  ls
+  579  emacs -nw Pulse1Hz.sh
+  580  ./Pulse1Hz.sh
+  581  cd ~/Pulser/
+  582  ls
+  583  emacs -nw Pulse100Hz.sh
+  584  rm *~
+  585  ls
+  586  rm pv-1.3.4-1.x86_64.rpm 
+  587  rm slowcat.py 
+  588  ls
+  589  ./Pulse100Hz.sh 
+  590  putty -load Pulser
+  591  top
+  592  cd Pulser/
+  593  ls
+  594  cp Pulse1Hz.sh Pulse100Hz.sh
+  595  emacs -nw Pulse100Hz.sh 
+  596  ./Pulse100Hz.sh
+  597  ./Pulse1Hz.sh
+  598  putty
+  599  putty -load Pulser
+  600  fg
+  601  top
+  602  ls
+  603  emacs -nw PulseSeq100Hz.txt 
+  604  emacs -nw PulseSeq1Hz.txt
+  605  emacs -nw PulseSeq100Hz.txt
+  606  ./Pulse100Hz.sh
+  607  ll
+  608  file -I PulseSeq100Hz.txt 
+  609  file -i PulseSeq100Hz.txt 
+  610  file -i PulseSeq1Hz.txt 
+  611  ls
+  612  emacs -nw Pulse100Hz.sh
+  613  ./Pulse100Hz.sh
+  614  ls
+  615  cat -v PulseSeq1Hz.txt
+  616  cat -v PulseSeq100Hz.txt
+  617  cat -v PulseSeq1Hz.txt
+  618  cat -v PulseSeq100Hz.txt
+  619  ls
+  620  emacs -nw slowcat.py 
+  621  man plink
+  622  top
+  623  putty
+  624  emacs PulseSeq100Hz.txt \
+  625  emacs PulseSeq100Hz.txt
+  626  emacs -nw Pulse100Hz.sh
+  627  ./Pulse100Hz.sh
+  628  emacs -nw Pulse100Hz.sh
+  629  putty
+  630  emacs -nw PulseSeq100Hz.txt 
+  631  emacs -nw Pulse100Hz.sh
+  632  puty
+  633  putty
+  634  ./Pulse100Hz.sh
+  635  emacs -nw Pulse100Hz.sh
+  636  ./Pulse100Hz.sh
+  637  top
+  638  emacs -nw Pulse100Hz.sh
+  639  python slowcat.py -d 0.01 PulseSeq100Hz.txt 
+  640  python slowcat.py -d 0.01 < PulseSeq100Hz.txt 
+  641  emacs -nw Pulse100Hz.sh
+  642  ./Pulse100Hz.sh
+  643  emacs -nw Pulse100Hz.sh
+  644  python slowcat.py -d 0.01 < PulseSeq100Hz.txt 
+  645  emacs -nw Pulse100Hz.sh
+  646  python slowcat.py -d 0.01 < PulseSeq100Hz.txt 
+  647  ./Pulse100Hz.sh
+  648  emacs -nw Pulse100Hz.sh
+  649  ./Pulse100Hz.sh
+  650  top
+  651  ./Pulse100Hz.sh
+  652  ls
+  653  cd development
+  654  ls
+  655  ls uboonedaq/projects/
+  656  ls uboonedaq/projects/pabwork/
+  657  diff uboonedaq/projects/pabwork/nevispcie_diag.cpp /home/georgiak/nevispcie_diag.cpp 
+  658  ls
+  659  export UBOONEDAR_HOME_DIR=${HOME}/development
+  660  source /uboone/setup_online.sh
+  661  cd development/build/
+  662  c
+  663  cd build
+  664  source ../uboonedaq/projects/ups/setup_for_development -d
+  665  cmake -DCMAKE_INSTALL_PREFIX=${UBOONEDAQ_HOME_DIR}/install -> DCMAKE_BUILD_TYPE=$CETPKG_TYPE -Dqualifier:STRING=$CETPKG_QUAL $CETPKG_SOURCE
+  666   make clean; make -j32; make install
+  667  diff ../uboonedaq/projects/pabwork/nevispcie_diag.cpp /home/georgiak/nevispcie_diag.cpp
+  668  nevispcie_diag 
+  669  history
+  670  less uboonedaq/projects/pabwork/nevispcie_diag.cpp
+  671  less ../uboonedaq/projects/pabwork/nevispcie_diag.cpp
+  672  ls
+  673  ls ../
+  674  ls ../uboonedaq/
+  675  ls ../uboonedaq/projects/pabwork/
+  676  exit
+  677  ls output/
+  678  ls output/pmt/
+  679  . /uboone/setup
+  680  . /home/uboonedaq/development/install/setup
+  681  setup uboonedaq v1_00_00 -f Linux64bit+2.6-2.12 -q debug:e1
+  682  nevispcie_diag
+  683  ksu
+  684  history
+  685  less /home/georgiak/nevispcie_diag.cpp 
+  686  uptime
+  687  ksu
+  688  exit
+  689  cd Pulser/
+  690  ./Pulse1Hz.sh 
+  691  ls
+  692  ./Pulse100Hz.sh 
+  693  emacs -nw Pulse100Hz.sh 
+  694  ./Pulse100Hz.sh 
+  695  ls
+  696  emacs -nw Pulse100Hz.sh
+  697  putty
+  698  putty -load Pulser
+  699  ./Pulse1Hz.sh 
+  700  ls
+  701  emacs -nw PulseSeq100Hz.txt 
+  702  man pv
+  703  emacs -nw PulseSeq100Hz.txt 
+  704  emacs -nw PulseSeq1Hz.txt 
+  705  emacs -nw Pulse1Hz.sh 
+  706  emacs -nw Pulse1Hz.sh
+  707  emacs -nw Pulse100\Hz.sh
+  708  emacs -nw Pulse100Hz.sh
+  709  ./Pulse100Hz.sh
+  710  man pv
+  711  ls
+  712  emacs -nw Pulse100Hz.sh
+  713  ll PulseSeq100Hz.txt 
+  714  emacs -nw Pulse100Hz.sh
+  715  ./Pulse100Hz.sh
+  716  emacs -nw Pulse100Hz.sh
+  717  ./Pulse1
+  718  ./Pulse100Hz.sh
+  719  ls
+  720  emacs -nw PuttySlowLoad.sh
+  721  chmod +rwxrwxrwx PuttySlowLoad.sh 
+  722  emacs -nw Pulse100Hz.sh
+  723  ./Pulse100Hz.sh
+  724  s
+  725  emacs -nw PulseSeq100Hz.txt 
+  726  emacs -nw Pulse100Hz.sh
+  727  emacs -nw PuttySlowLoad.sh 
+  728  ./Pulse100Hz.sh
+  729  emacs -nw PuttySlowLoad.sh
+  730  ./Pulse100Hz.sh
+  731  emacs -nw PulseSeq100Hz.txt\
+  732  emacs -nw PulseSeq100Hz.txt
+  733  ls
+  734  rm PuttySlowLoad.sh
+  735  emacs -nw PulseSeq100Hz.txt
+  736  emacs -nw Pulse100Hz.sh
+  737  ./Pulse100Hz.sh
+  738  putty
+  739  putty -load Pulser
+  740  1700
+  741  WD 3 1700
+  742  WD 2 3000
+  743  WD 0 4200
+  744  RE
+  745  ./Pulse100Hz.sh
+  746  putty -load Pulser
+  747  WD 3 0
+  748  WD 2 1700
+  749  ./Pulse100Hz.sh
+  750  putty -load Pulser
+  751  WD 0 4200
+  752  ./Pulse1Hz.sh
+  753  ./Pulse100Hz.sh
+  754  putty -load Pulser
+  755  cd ~/Pulser/
+  756  ./Pulse1Hz.sh
+  757  ./Pulse100Hz.sh
+  758  putty -load Pulser
+  759  ./Pulse100Hz.sh
+  760  putty -load Pulser
+  761  cd Pulser/
+  762  ./Pulse1Hz.sh
+  763  cd ~
+  764  ./pmtreadout 
+  765  ksu
+  766  ks
+  767  ls
+  768  ksu
+  769  top
+  770  ls
+  771  top
+  772  ls
+  773  ./pmtreadout 
+  774  ksu
+  775  cd Pulser/
+  776  ./Pulse100Hz.sh
+  777  ./Pulse1Hz.sh
+  778  ./Pulse100Hz.sh
+  779  cd /home/uboonedaq/
+  780  ls
+  781  ./pmtreadout 
+  782  ls
+  783  cd Pulser/
+  784  ./Pulse1Hz.sh
+  785  ls
+  786  kinit -r 7d bjpjones@fnal.gov
+  787  restart
+  788  reboot
+  789  ksu
+  790  ./uboone/setup
+  791  ksu
+  792  ls
+  793  ls -ltr
+  794  cd development
+  795  ls
+  796  cd uboonedaq/
+  797  ls
+  798  cd projects/pabwork/
+  799  ls
+  800  diff nevispcie_diag.cpp  ~georgiak/nevispcie_diag.cpp
+  801  cd ~
+  802  ksu
+  803  exit
+  804   cd development; cd build
+  805  source ../uboonedaq/projects/ups/setup_for_development -d
+  806  cmake -DCMAKE_INSTALL_PREFIX=${UBOONEDAQ_HOME_DIR}/install -DCMAKE_BUILD_TYPE=$CETPKG_TYPE -Dqualifier:STRING=$CETPKG_QUAL $CETPKG_SOURCE
+  807  make clean
+  808  make -j32
+  809  make install
+  810  diff ../uboonedaq/projects/pabwork/nevispcie_diag.cpp ~georgiak/nevispcie_diag.cpp
+  811  cp ~georgiak/nevispcie_diag.cpp ../uboonedaq/projects/pabwork/.
+  812  make
+  813  make install
+  814  exit
+  815  ksu
+  816  exit
+  817  ksu
+  818  cd development; cd build
+  819  source ../uboonedaq/projects/ups/setup_for_development -d
+  820  cmake -DCMAKE_INSTALL_PREFIX=${UBOONEDAQ_HOME_DIR}/install -DCMAKE_BUILD_TYPE=$CETPKG_TYPE -Dqualifier:STRING=$CETPKG_QUAL $CETPKG_SOURCE
+  821  make clean
+  822  make -j32
+  823  make install
+  824  cp ~georgiak/nevispcie_diag.cpp ../uboonedaq/projects/pabwork/nevispcie_diag.cpp 
+  825  make
+  826  make install
+  827  cp ~georgiak/nevispcie_diag.cpp ../uboonedaq/projects/pabwork/nevispcie_diag.cpp 
+  828  make
+  829  make install
+  830  ls
+  831  . /uboone/setup
+  832  . /home/uboonedaq/development/install/setup 
+  833  setup uboonedaq v1_00_00 -f Linux64bit+2.6-2.12 -q debug:e1
+  834  nevispcie_diag 
+  835  ls
+  836  ksu
+  837  ls
+  838  ksu
+  839  . /uboone/setup
+  840  . /home/uboonedaq/development/install/setup 
+  841  ksu
+  842  exit
+  843  cd development; cd build
+  844   source ../uboonedaq/projects/ups/setup_for_development -d
+  845  cmake -DCMAKE_INSTALL_PREFIX=${UBOONEDAQ_HOME_DIR}/install -DCMAKE_BUILD_TYPE=$CETPKG_TYPE -Dqualifier:STRING=$CETPKG_QUAL $CETPKG_SOURCE
+  846  make clean
+  847  make -j32
+  848  make install
+  849  emacs ../uboonedaq/projects/pabwork/nevispcie_diag.cpp &
+  850  pwd
+  851  ls
+  852  cd development
+  853  ls
+  854  cd uboonedaq/
+  855  ls
+  856  cd projects/
+  857  cd pabwork/
+  858  ls
+  859  cd ../../
+  860  ls
+  861  cd ../
+  862  ls
+  863  cd ./.
+  864  cd ../
+  865  ls
+  866  cd readout_config_files/
+  867  ls
+  868  cp feb_pmt_fpga_test feb_pmt_fpga_test feb_pmt_fpga_test.rbf
+  869  ls
+  870  ls -blrath
+  871  cp feb_pmt_fpga_test feb_pmt_fpga_test.rbf
+  872  ls
+  873  cd ../
+  874  ls
+  875  cd readout_config_files/
+  876  ksu
+  877  ls
+  878  cd ..
+  879  ls -blarth
+  880  ls -blarth readout_config_files/
+  881  ls -blarth readout_config_files/ -d
+  882  man ln
+  883  ln -s ~toups/module1x_pmt_64MHz_femi_08032012_1.rbf feb_pmt_fpga_test_1
+  884  ls -blarth
+  885  cd development
+  886  echo $UBOONEDAQ_HOME_DIR
+  887  cd build/
+  888  ls
+  889  less ../uboonedaq/projects/ups/setup_for_development 
+  890  cd ../
+  891  ls
+  892  cd uboonedaq/
+  893  ls
+  894  cd projects/
+  895  ls
+  896  cd pabwork/
+  897  ls
+  898  emacs -nw nevispcie_diag.cpp 
+  899  make clean
+  900  cd ../
+  901  ls
+  902  cd ../../
+  903  cd build/
+  904  make clean
+  905  make
+  906  source ../uboonedaq/projects/ups/setup_for_development -d
+  907  cmake -DCMAKE_INSTALL_PREFIX=${UBOONEDAQ_HOME}/install -DCMAKE_BUILD_TYPE=$CETPKG_TYPE -Dqualifier:STRING=$CETPKG_QUAL $CETPKG_SOURCE
+  908  make clean
+  909  make -j32
+  910  make install
+  911  ls -blarth
+  912  make clean
+  913  make -j32
+  914  ls
+  915  cd ../
+  916  ls
+  917  cd uboonedaq/projects/pabwork/
+  918  ls
+  919  which nevispcie_diag 
+  920  cd ~/development/build/bin/
+  921  ls -blarth
+  922  exit
+  923  ls
+  924  cd development
+  925  ls
+  926  cd uboonedaq/
+  927  ls
+  928  cd ../build/
+  929  ls
+  930  make install
+  931  ls
+  932  cd ../
+  933  ls
+  934  cd build/bin/
+  935  ls
+  936  cd ..
+  937  ls
+  938  cd ../
+  939  ls
+  940  cd ../
+  941  ls
+  942  cd development
+  943  ls
+  944  source /uboone/setup_online
+  945  source /uboone/setup_online.sh
+  946  which setup-development-source
+  947  less /uboone/setup_online
+  948  less /uboone/setup_online.sh
+  949  ls
+  950  less /uboone/setup_online.sh
+  951  ls
+  952  cd build/
+  953  ls
+  954  ls -blarth
+  955  cd ../
+  956  ls
+  957  cd install/
+  958  ls
+  959  cd ../uboonedaq/
+  960  ls
+  961  ls -blarth
+  962  cd ../
+  963  ls
+  964  cd ../
+  965  ls
+  966  cd development
+  967  ls
+  968  cd uboonedaq/
+  969  ls
+  970  cd ../
+  971  ls
+  972  cd build/
+  973  ls
+  974  less ../uboonedaq/projects/ups/setup_for_development 
+  975  source ../uboonedaq/projects/ups/setup_for_development 
+  976  less ../uboonedaq/projects/ups/setup_for_development 
+  977  source ../uboonedaq/projects/ups/setup_for_development -d
+  978  exit
+  979  ls -blart
+  980  ls readout_config_files/
+  981  unlink feb_pmt_fpga_test_1 
+  982  ln -s readout_config_files/feb_pmt_fpga_test feb_pmt_fpga_test_1
+  983  exit
+  984  ls -blarth
+  985  unlink feb_pmt_fpga_test_1 
+  986  ln -s feb_pmt_fpga_test_1 readout_config_files/feb_pmt_fpga_test 
+  987  ls readout_config_files/
+  988  ls readout_config_files/ -blarth
+  989  ln -s readout_config_files/feb_pmt_fpga_test feb_pmt_fpga_test_1
+  990  ls
+  991  exit
+  992  ls
+  993  ls -blarth
+  994  ls ~toups
+  995  unlink feb_pmt_fpga_test_1
+  996  ln -s /home/toups/module1x_pmt_64MHz_femi_08032012_1.rbf feb_pmt_fpga_test_1
+  997  ls ~toups
+  998  ls -blarth
+  999  cd ~/Pulser/
+ 1000  ls
+ 1001  emacs -nw PulseSeq1Hz.txt 
+ 1002  emacs -nw PulseSeq100Hz.txt 
+ 1003  emacs -nw PulseSeq1Hz.txt 
+ 1004  emacs -nw ~/.root_hist 
+ 1005  history 
+ 1006  history > hist.txt
